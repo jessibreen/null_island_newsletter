@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Null Island Conservation Society Newsletter</title>
+<meta name="description" content="Zero coordinates, zero excuses: protecting the Verdapix. A GIS habitat analysis for Null Island.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script defer src="app.js"></script>
+</head>
+<body>
+<nav class="sectionnav" aria-label="Sections">
+  <ol>
+    <li><a href="#discover">Discover Null Island</a></li>
+    <li><a href="#habitats">Potential Habitats</a></li>
+    <li><a href="#site-a">Site A</a></li>
+    <li><a href="#site-b">Site B</a></li>
+    <li><a href="#site-c">Site C</a></li>
+  </ol>
+</nav>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <p class="kicker"><span>Newsletter</span><span>0°&thinsp;N 0°&thinsp;E</span></p>
+      <h1>Null Island Conservation Society Newsletter</h1>
+      <p class="dek">Zero coordinates, zero excuses: protecting the Verdapix</p>
+      <div class="byline"><span>By <strong>Anna Kilguss</strong></span><span>May 7, 2025</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="story">
+  <div class="narrative">
+
+    <section class="step" id="discover" data-view="overview" data-nav="discover">
+      <h2>Discover Null Island</h2>
+      <p class="lede">A luscious island nation dedicated to conservation, located along the west coast of Africa at 0°N 0°E.</p>
+      <hr class="sep">
+      <h3>Visit today</h3>
+      <p><em>Hiking, rafting, safaris - oh my!</em></p>
+      <p>Discover Null Island's surreal beauty by trial, river, or road. Our network of 80 trails wind through lush rain forests, vast savannas, seasonal forests, and thriving wetlands. These biomes provide unique exposure to extensive flora and fauna unlike anywhere else on Earth.</p>
+      <p>Craving adventure? Navigate our 180+ rivers by raft. Care to cover milage with ease? We offer ride along safaris on our two main islands.</p>
+      <p>All exploration is accessible from the 99 cities - each one offering a one of a kind cultural experience.</p>
+    </section>
+
+    <section class="step" id="verdapix" data-view="overview" data-nav="verdapix">
+      <h2>Meet the Verdapix</h2>
+      <figure class="portrait">
+        <img src="images/verdapix.jpg" width="640" height="640" alt="A small brown mammal with large rounded ears and a long curling tail standing on a mossy log in a rainforest.">
+        <figcaption>Verdapix (<em>Camufelix nulli</em>)</figcaption>
+      </figure>
+      <p>This furry small to medium sized mammal is ingenious at camouflage loves to use its prehensile tail to climb its densely forested habitats. Three important plant species give the Verdapix the fuel to thrive:</p>
+      <div class="plants">
+        <article class="plant">
+          <img src="images/umbrafruit.jpg" width="640" height="640" loading="lazy" alt="A broad-leaved shrub with silvery-veined leaves and clusters of dark red berries.">
+          <span class="swatchline" style="background: var(--sw-fructumbra, #8e2f4a)"></span>
+          <h3>Umbrafruit Shrub</h3>
+          <p><em>Fructumbra densis - </em>these large, leafy shrubs provide both food and shelter to various fauna.</p>
+        </article>
+        <article class="plant">
+          <img src="images/velvetvine.jpg" width="640" height="640" loading="lazy" alt="A leafy vine with yellow star-shaped flowers climbing a tall tree trunk.">
+          <span class="swatchline" style="background: var(--sw-lianus, #c9950f)"></span>
+          <h3>Velvetvine Creeper</h3>
+          <p><em>Lianus vellatus</em> - this vine climbs large trees and provides coverage for both animals and insects.</p>
+        </article>
+        <article class="plant">
+          <img src="images/falsefern.jpg" width="640" height="640" loading="lazy" alt="A fern-like palm with a short trunk and a wide crown of feathery fronds on the forest floor.">
+          <span class="swatchline" style="background: var(--sw-palmopectis, #2f6b3a)"></span>
+          <h3>False Fern Palm</h3>
+          <p><em>Palmopectis foliata </em>- grown in clusters, these mid-sized trees provide sprawling canopies.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="step" id="shadewind" data-view="overview" data-nav="shadewind">
+      <h2>Meet the Shadewind</h2>
+      <figure class="portrait">
+        <img src="images/shadewind.jpg" width="640" height="640" loading="lazy" alt="A lean, striped wild cat with tufted ears prowling through a dim forest.">
+        <figcaption>Shadewind (<em>Umbrapardus venator</em>)</figcaption>
+      </figure>
+      <p>This muscular, striped predator lurks in the shadows around Null Island. Its favorite snack is our beloved (and endangered) Verdapix. Found hidden underneath the Ghostpine Thornbush throughout the tropical forests, this agile mammal camouflages perfectly.</p>
+      <article class="plant solo plants">
+        <img src="images/ghostpine.jpg" width="640" height="640" loading="lazy" alt="A dense pale grey-green shrub with spiny upright stems.">
+        <div>
+          <h3>Ghostpine Thornbush</h3>
+          <p><em>Spinaumbralis spectralis</em> - pale grey-green dense shrub with sharp spines attracts insects and hides predators.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="step" id="habitats" data-view="hpByCity" data-nav="habitats">
+      <h2>Unveiling Potential Habitats</h2>
+      <p>The conservation research team were challenged to identify <strong>High Priority Habitats</strong> for the Verdapix.</p>
+      <p>The following habitat criteria had to be met in order to be classified as <em>High Priority</em>:</p>
+      <ul>
+        <li><em>Contain all three plant species</em>
+          <ul><li class="species">Palmopectis foliata</li><li class="species">Lianus vellatus</li><li class="species">Fructumbra densis</li></ul>
+        </li>
+        <li><em>Within 3 kilometers of trail cameras</em>
+          <ul><li>All cameras must be active between the months of March through May</li></ul>
+        </li>
+      </ul>
+      <hr class="sep">
+      <p>For ease of transportation, the research team needed to be headquartered in a city with the highest hectares of High Priority Habitat within 10 kilometers. Four potential cities were selected:</p>
+      <p class="towns"><span>Axbridgeton</span><span>Tetrinch</span><span>Tindoreham</span><span>Betrinch</span></p>
+    </section>
+
+    <section class="step" data-view="potential" data-nav="habitats">
+      <p class="eyebrow">Steps for selection</p>
+      <h3>Steps for selection</h3>
+      <p>Various tools were used to determine these potential habitats.</p>
+      <h4><span class="stepmark">Step 1</span> Multipart to Singlepart</h4>
+      <p>This tool was used to separate the three different plant species data into a new feature class.</p>
+    </section>
+
+    <section class="step" data-view="potential" data-nav="habitats">
+      <h4><span class="stepmark">Step 2</span> Intersect</h4>
+      <p>This tool was used to determine what areas on the Island contained all three plant species.</p>
+      <p class="stat"><b>141</b> patches of potential habitat patches</p>
+    </section>
+
+    <section class="step" data-view="cams" data-nav="habitats">
+      <h4><span class="stepmark">Step 3</span> Buffer</h4>
+      <p>This tool was used on the trail camera data layer to locate all potential habitat areas within 3km of each camera from March to May.</p>
+      <p class="stat"><b>111</b> trail cameras were active between March and May</p>
+    </section>
+
+    <section class="step" data-view="highpriority" data-nav="habitats">
+      <h4><span class="stepmark">Step 4</span> Clip</h4>
+      <p>The potential habitats within the 3km buffer were clipped.</p>
+      <p class="stat"><b>31</b> patches of High Priority potential habitats</p>
+    </section>
+
+    <section class="step" data-view="hpByCity" data-nav="habitats">
+      <h4><span class="stepmark">Step 5</span> Buffer + Spatial Join</h4>
+      <p>A 10km buffer was applied around each city. The high priority data and city buffer data tables were spatially joined. Data was dissolved using the "contains" function which calculates how much high priority patches are within the 10km boundary. The hectares of high priority habitat within each city buffer were calculated using the calculate geometry feature in the table.</p>
+    </section>
+
+    <section class="step" id="sanctuaries" data-view="siteA" data-nav="sanctuaries">
+      <h2>Selecting Sanctuaries: Our Top Reserve Sites</h2>
+      <p>All proposed wildlife reserve sites needed to meet the following criteria:</p>
+      <ol>
+        <li>Does not contain nor is adjacent to any Ghostpine Thornbush</li>
+        <li>Does not contain any cities or roads</li>
+        <li>Must be accessible via trail and be near a city for conservation staff</li>
+      </ol>
+      <p><em>The research team decided they wanted to focus their efforts in areas which contained more than just the listed criteria. The team is proposing larger areas in hopes of expansion - combining nearby potential reserve patches. This will provide both the three plant species and Verdapix to thrive in a secluded area with high growth potential.</em></p>
+      <p>Based on the calculation of these criteria - it was determined there were 25 potential patches. The research team has selected the top 3 areas for the sanctuaries.</p>
+    </section>
+
+    <section class="step" id="site-a" data-view="siteA" data-nav="sanctuaries">
+      <h3>Site A</h3>
+      <dl class="facts">
+        <div><dt>Site area</dt><dd>9,082 ha</dd></div>
+        <div><dt>Trails</dt><dd>18,953 m</dd></div>
+        <div><dt>Nearest town</dt><dd>Hornley</dd></div>
+      </dl>
+      <p>Hugging one of Null Island's magnificent coastlines, Site A offers fabulous potential for a wildlife reserve site for the Verdapix. This area spans 9,082 hectares, has 18,953 meters of trails, and is just over 2 kilometers from the quiet town of Hornley. A combination of two potential patches within Site A amount to 3,022 hectares.</p>
+      <p>With no Ghostpine Thornbush, Site A is situated perfectly in tropical seasonal forest - a biome in which the Verdapix thrive. This area is off the beaten path at a distance of about 17 kilometers from the road. Thus, Site A is a highly undisturbed location for preserve the precious Verdapix.</p>
+    </section>
+
+    <section class="step" id="site-b" data-view="siteB" data-nav="site-b">
+      <h2>Site B</h2>
+      <dl class="facts">
+        <div><dt>Site area</dt><dd>8,758 ha</dd></div>
+        <div><dt>Combined patches</dt><dd>2,203 ha</dd></div>
+        <div><dt>Nearest city</dt><dd>Wigford</dd></div>
+      </dl>
+      <p>Introducing Site B!</p>
+      <p>This site area spans 8,758 hectares, 2,203 of those hectares are of two combined potential patches.</p>
+      <p>Site B contains both tropical rainforest (the Verdapix's favorite) and tropical seasonal forest biomes. The combination of these canopies gives the Verdapix more area to flex its tail muscles and climb the highest of heights.</p>
+      <p>The closeness to the bustling city Wigford will give the conservationists an easy commute. Prefer something quieter? Just on the other side of the potential reserve, 3 kilometers away, is the sleepy village of Sealewich.</p>
+    </section>
+
+    <section class="step" id="site-c" data-view="siteC" data-nav="site-c">
+      <h2>Site C</h2>
+      <dl class="facts">
+        <div><dt>Site area</dt><dd>4,845 ha</dd></div>
+        <div><dt>Combined patches</dt><dd>1,491 ha</dd></div>
+        <div><dt>Nearest town</dt><dd>Maringra</dd></div>
+      </dl>
+      <p>This quaint potential reserve location is nestled into the Island's famous tropical rainforest. Nearly 48 kilometers from any roadways, Site C mirrors the calmness of the nearby town of Maringra.</p>
+      <p>The site's 4,845 hectares contains two potential patches that combine to a total of 1,491 hectares. While Site C may be the furthest from the main drag, it is nearest to a patch of Ghostpine Thornbush (approximately 2km away). The researchers have still selected Site C as a potential sanctuary location due to the proportion of high rainforest trees compared to the distance from the shrubs.</p>
+    </section>
+
+  </div>
+
+  <div class="mapcol">
+    <div class="mapframe">
+      <div id="map" role="region" aria-label="Map of Null Island that changes with each section of the story"></div>
+      <div class="global-inset" id="globalInset" role="group" aria-label="Global context showing the stored island location" hidden>
+        <div id="insetMap" role="img" aria-label="World map with the stored island outlined and marked"></div>
+        <span class="global-inset-label">Global context</span>
+      </div>
+      <div class="maptitle" id="mapTitle">Null Island</div>
+      <div class="legend" id="legend"></div>
+    </div>
+  </div>
+</main>
+
+<footer class="credits">
+  <div>
+    <span>Story and analysis by Anna Kilguss, May 7, 2025. First published as an ArcGIS StoryMap.</span>
+    <span>Map layers exported from the author's ArcGIS Online web maps, built on the Null Island Data Layers. Maps drawn with Leaflet.</span>
+  </div>
+</footer>
+
+</body>
+</html>
